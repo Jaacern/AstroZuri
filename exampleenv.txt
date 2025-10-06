@@ -1,0 +1,92 @@
+# ============================================
+# Zuricatas Simulator - Variables de Entorno
+# NASA Space Apps Challenge 2025
+# ============================================
+
+# ============================================
+# CONFIGURACIÓN GENERAL
+# ============================================
+
+# Entorno de ejecución (development, production, test)
+NODE_ENV=development
+
+# Puerto del servidor backend
+PORT=5000
+
+# URL del frontend para configuración CORS
+FRONTEND_URL=http://localhost:3001
+
+# ============================================
+# BASE DE DATOS
+# ============================================
+
+# URI de conexión a MongoDB
+# Para desarrollo local:
+MONGODB_URI=mongodb://localhost:27017/astroimpact
+
+# Para producción (ejemplo con MongoDB Atlas):
+# MONGODB_URI=mongodb+srv://usuario:password@cluster.mongodb.net/astroimpact?retryWrites=true&w=majority
+
+# ============================================
+# AUTENTICACIÓN JWT
+# ============================================
+
+# Clave secreta para firmar tokens JWT (cambiar por una clave segura en producción)
+JWT_SECRET=tu_clave_secreta_jwt_muy_segura_aqui_cambiar_en_produccion
+
+# ============================================
+# NASA API
+# ============================================
+
+# Clave API de NASA para obtener datos de asteroides
+# Obtén tu clave gratuita en: https://api.nasa.gov/
+NASA_API_KEY=DEMO_KEY
+
+# ============================================
+# RATE LIMITING
+# ============================================
+
+# Ventana de tiempo para rate limiting (en milisegundos)
+RATE_LIMIT_WINDOW_MS=900000
+
+# Número máximo de requests por ventana de tiempo
+RATE_LIMIT_MAX_REQUESTS=100
+
+# ============================================
+# CONFIGURACIÓN ADICIONAL
+# ============================================
+
+# Configuración para desarrollo
+# Descomenta las siguientes líneas si necesitas configuración adicional:
+
+# # Puerto alternativo para desarrollo
+# DEV_PORT=3001
+
+# # Configuración de logging
+# LOG_LEVEL=debug
+
+# # Configuración de CORS adicional
+# CORS_ORIGIN=http://localhost:3001,http://localhost:3000
+
+# ============================================
+# INSTRUCCIONES DE USO
+# ============================================
+
+# 1. Copia este archivo como .env en la carpeta backend/
+# 2. Cambia los valores según tu configuración
+# 3. NUNCA subas el archivo .env al repositorio
+# 4. Para producción, usa variables de entorno del servidor
+
+# Comando para copiar:
+# cp exampleenv.txt backend/.env
+
+# ============================================
+# NOTAS IMPORTANTES
+# ============================================
+
+# - Cambia JWT_SECRET por una clave segura y única
+# - Obtén una clave API real de NASA en https://api.nasa.gov/
+# - Para producción, usa una base de datos MongoDB Atlas o similar
+# - Ajusta los límites de rate limiting según tus necesidades
+
+
